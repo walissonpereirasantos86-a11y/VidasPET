@@ -11,14 +11,14 @@ body{
             text-align: left;
             font-size: 70px;
             font-weight: 100px;
-            color: #0a3a6e; /* azul bonito */
+            color: #0a3a6e; 
             margin-top: 30px;
             letter-spacing: 2px;
         }
 
        
 
-      /* efeito simples se quiser */
+      
         .titulo:hover {
             color: #0b65c6;
             transition: 0.3s ease;
