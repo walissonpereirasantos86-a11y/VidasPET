@@ -1,0 +1,26 @@
+*{
+  
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins",sans-serif;
+    background-color: #f8f9fa;
+}
+
+  .titulo {
+            text-align: left;
+            font-size: 70px;
+            font-weight: 100px;
+            color: #0a3a6e; /* azul bonito */
+            margin-top: 30px;
+            letter-spacing: 2px;
+        }
+
+       
+
+      /* efeito simples se quiser */
+        .titulo:hover {
+            color: #0b65c6;
+            transition: 0.3s ease;
+        }
+}
