@@ -7,6 +7,43 @@ body{
     background-color: #f8f9fa;
 }
 
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 140px;
+}
+.search-box .icon {
+    font-size: 20px;
+    color: #666;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;                      
+    font-size: 16px;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+  .search-box{
+    width: 100%;
+    max-width: 900px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    gap: 15px;                    
+    font-family: "Poppins", sans-serif;
+    
+  }
   .titulo {
             
             text-align: left;
@@ -20,11 +57,15 @@ body{
        .menu{
         display: flex;
         gap: 25px;
-        margin-right: 20px;
+        margin-left: 300px;
        }
 
       
         .titulo:hover {
+            color: #0a3a6e;
+            transition: 0.3s ease;
+        }
+        .menu h2:hover{
             color: #0a3a6e;
             transition: 0.3s ease;
         }
