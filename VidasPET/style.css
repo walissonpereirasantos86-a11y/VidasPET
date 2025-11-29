@@ -8,15 +8,21 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f8f9fa;
+    /* Ajustar o corpo para usar grid se quisermos o header FIXO no topo e o resto em grid */
+    /* display: grid; */
+    /* grid-template-rows: auto 1fr; */
+    /* min-height: 100vh; */
 }
 
 /* ----------- HEADER ----------- */
 
 .top {
     display: flex;
-    justify-content: space-between;   /* empurra o contato para a direita */
+    justify-content: space-between; 
     align-items: center;
     padding: 15px 40px;
+    background-color: white; /* Adiciona um fundo branco ao header */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para destacar */
 }
 
 /* Logo + título */
@@ -41,7 +47,7 @@ body {
 
 /* Menu central */
 .menu {
-    flex: 1;                          /* ocupa o espaço central */
+    flex: 1; 
     display: flex;
     justify-content: center;
     gap: 35px;
@@ -66,21 +72,70 @@ body {
 }
 
 .contato {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
+    height: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
+    width: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
+    /* A imagem 1 parece ter um ícone de balão de fala mais simples, sem borda arredondada */
+    /* Se for a imagem 'pngtree-message-icon-png-image_9442801.png', ajuste conforme necessário */
 }
 
 .wall {
-    height: 60px;
-    width: 3px;
+    display: none; /* A imagem 1 não mostra a "wall" */
 }
 
 .perfil {
-    height: 60px;
-    width: 60px;
+    height: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
+    width: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
     border-radius: 50%;
 }
+
+/* ----------- Layout Principal com Sidebar ----------- */
+
+.main-content-wrapper {
+    display: flex; /* Cria um layout flexível para as duas colunas */
+    min-height: calc(100vh - 90px); /* Altura mínima, subtraindo a altura do header */
+}
+
+/* Menu Lateral Esquerdo */
+.consultas-hoje {
+    background-color: #76A843; /* Cor de fundo verde do menu lateral */
+    color: white;
+    width: 250px; /* Largura do menu lateral */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.consultas-hoje h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Linha divisória */
+    padding-bottom: 10px;
+}
+
+.consultas-hoje ul {
+    list-style: none; /* Remove marcadores da lista */
+    margin-bottom: 20px;
+}
+
+.consultas-hoje ul li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.consultas-hoje .saiba-mais {
+    text-decoration: none;
+    color: white;
+    font-size: 0.85rem;
+    display: block; /* Para que o margin-top funcione */
+    margin-top: 15px;
+    text-align: right;
+}
+
+/* Área Principal (onde o banner verde estará) */
+.main-area {
+    flex-grow: 1; /* Faz com que ocupe o espaço restante */
+    padding: 20px; /* Espaçamento geral do conteúdo principal */
+}
+
 
 /* ----------- BANNER VERDE ----------- */
 
@@ -91,14 +146,61 @@ body {
     height: 250px;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;  Remover para alinhar o texto à esquerda do logo */
+    /* align-items: center;  Remover para alinhar o texto ao centro verticalmente */
 
-    padding: 0 20px;
+    /* Novo layout para o banner */
+    position: relative; /* Para posicionar o logo e o texto "Equipe.2025" */
+    padding: 0 40px; /* Mais padding para afastar das bordas */
+    flex-direction: column; /* Para empilhar o texto e o logo */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: flex-start; /* Alinha o texto à esquerda */
 }
 
 .banner-verde p {
     font-size: 1.5rem;
-    text-align: center;
-    max-width: 80%;
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 60%; /* Ajusta a largura para o texto não ir até o fim */
+    font-style: italic; /* O texto na imagem 1 parece itálico */
+    line-height: 1.3;
+}
+
+.banner-verde .equipe {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-style: normal; /* "Equipe.2025" não parece itálico */
+}
+
+.banner-logo-container {
+    position: absolute; /* Posição absoluta para o logo e texto */
+    right: 40px; /* Distância da direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajuste fino para centralizar */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o logo e texto "PetShow" */
+    gap: 5px;
+}
+
+.banner-logo {
+    height: 150px; /* Tamanho do logo circular */
+    width: 150px;
+    border-radius: 50%; /* Se a imagem já for circular, isso não é estritamente necessário */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+}
+
+/* Se você precisar do texto "PetShow" abaixo do logo */
+.banner-logo-text {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilos para outras seções (opcional, para ter um placeholder) */
+.outras-secoes {
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
