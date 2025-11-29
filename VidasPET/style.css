@@ -8,10 +8,6 @@
 body {
     font-family: "Poppins", sans-serif;
     background-color: #f8f9fa;
-    /* Ajustar o corpo para usar grid se quisermos o header FIXO no topo e o resto em grid */
-    /* display: grid; */
-    /* grid-template-rows: auto 1fr; */
-    /* min-height: 100vh; */
 }
 
 /* ----------- HEADER ----------- */
@@ -21,11 +17,11 @@ body {
     justify-content: space-between; 
     align-items: center;
     padding: 15px 40px;
-    background-color: white; /* Adiciona um fundo branco ao header */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para destacar */
+    background-color: white; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    position: relative; 
 }
 
-/* Logo + título */
 .logo-area {
     display: flex;
     align-items: center;
@@ -45,7 +41,6 @@ body {
     letter-spacing: 1px;
 }
 
-/* Menu central */
 .menu {
     flex: 1; 
     display: flex;
@@ -64,60 +59,70 @@ body {
     color: #0a3a6e;
 }
 
-/* Contato + perfil à direita */
-.contato-perfil {
+.contato-Perfil {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
 .contato {
-    height: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
-    width: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
-    /* A imagem 1 parece ter um ícone de balão de fala mais simples, sem borda arredondada */
-    /* Se for a imagem 'pngtree-message-icon-png-image_9442801.png', ajuste conforme necessário */
+    height: 30px; 
+    width: 30px; 
 }
 
 .wall {
-    display: none; /* A imagem 1 não mostra a "wall" */
+    display: none; 
 }
 
 .perfil {
-    height: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
-    width: 30px; /* Reduzindo o tamanho conforme a imagem 1 */
+    height: 30px; 
+    width: 30px; 
     border-radius: 50%;
 }
+
+.notification-badge {
+    position: absolute;
+    right: 75px; /* Posição ajustada sobre o ícone de mensagem */
+    top: 15px; /* Posição ajustada */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 0.7rem;
+    line-height: 1;
+    z-index: 10;
+}
+
 
 /* ----------- Layout Principal com Sidebar ----------- */
 
 .main-content-wrapper {
-    display: flex; /* Cria um layout flexível para as duas colunas */
-    min-height: calc(100vh - 90px); /* Altura mínima, subtraindo a altura do header */
+    display: flex; 
+    min-height: calc(100vh - 90px); 
 }
 
-/* Menu Lateral Esquerdo */
 .consultas-hoje {
-    background-color: #76A843; /* Cor de fundo verde do menu lateral */
+    background-color: #76A843; 
     color: white;
-    width: 250px; /* Largura do menu lateral */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    width: 250px; 
+    padding: 20px 20px 0 20px; 
+    min-height: calc(100vh - 90px);
 }
 
 .consultas-hoje h3 {
     font-size: 1.2rem;
     margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Linha divisória */
-    padding-bottom: 10px;
+    color: #92E862; 
 }
 
 .consultas-hoje ul {
-    list-style: none; /* Remove marcadores da lista */
-    margin-bottom: 20px;
+    list-style: none;
+    margin-bottom: 0;
+    padding-bottom: 10px; 
 }
 
 .consultas-hoje ul li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-size: 0.95rem;
 }
 
@@ -125,15 +130,15 @@ body {
     text-decoration: none;
     color: white;
     font-size: 0.85rem;
-    display: block; /* Para que o margin-top funcione */
-    margin-top: 15px;
+    display: block;
     text-align: right;
+    padding-bottom: 20px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
 }
 
-/* Área Principal (onde o banner verde estará) */
 .main-area {
-    flex-grow: 1; /* Faz com que ocupe o espaço restante */
-    padding: 20px; /* Espaçamento geral do conteúdo principal */
+    flex-grow: 1; 
+    padding: 20px; 
 }
 
 
@@ -144,63 +149,183 @@ body {
     color: white;
     width: 100%;
     height: 250px;
-
     display: flex;
-    /* justify-content: center;  Remover para alinhar o texto à esquerda do logo */
-    /* align-items: center;  Remover para alinhar o texto ao centro verticalmente */
-
-    /* Novo layout para o banner */
-    position: relative; /* Para posicionar o logo e o texto "Equipe.2025" */
-    padding: 0 40px; /* Mais padding para afastar das bordas */
-    flex-direction: column; /* Para empilhar o texto e o logo */
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    align-items: flex-start; /* Alinha o texto à esquerda */
+    position: relative; 
+    padding: 0 40px; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: flex-start; 
+    border-radius: 5px;
 }
 
 .banner-verde p {
     font-size: 1.5rem;
-    text-align: left; /* Alinha o texto à esquerda */
-    max-width: 60%; /* Ajusta a largura para o texto não ir até o fim */
-    font-style: italic; /* O texto na imagem 1 parece itálico */
+    text-align: left; 
+    max-width: 60%; 
+    font-style: italic; 
     line-height: 1.3;
 }
 
 .banner-verde .equipe {
     font-size: 1rem;
     margin-top: 10px;
-    font-style: normal; /* "Equipe.2025" não parece itálico */
+    font-style: normal; 
 }
 
 .banner-logo-container {
-    position: absolute; /* Posição absoluta para o logo e texto */
-    right: 40px; /* Distância da direita */
-    top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-50%); /* Ajuste fino para centralizar */
+    position: absolute; 
+    right: 40px; 
+    top: 50%; 
+    transform: translateY(-50%); 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza o logo e texto "PetShow" */
+    align-items: center; 
     gap: 5px;
 }
 
 .banner-logo {
-    height: 150px; /* Tamanho do logo circular */
+    height: 150px; 
     width: 150px;
-    border-radius: 50%; /* Se a imagem já for circular, isso não é estritamente necessário */
-    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    border-radius: 50%; 
+    object-fit: contain; 
 }
 
-/* Se você precisar do texto "PetShow" abaixo do logo */
 .banner-logo-text {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-/* Estilos para outras seções (opcional, para ter um placeholder) */
-.outras-secoes {
-    padding: 20px;
+
+/* ----------- SEÇÃO DE PRODUTOS ----------- */
+
+.sub-titulo-produtos {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.produtos-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.produto-card {
     background-color: white;
-    margin-top: 20px;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    padding: 10px;
+    width: 18%; 
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.produto-img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain; 
+    margin-bottom: 10px;
+}
+
+.produto-descricao {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+    height: 3em; 
+    overflow: hidden;
+    font-weight: 500;
+}
+
+.produto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.produto-preco {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-saiba-mais {
+    background-color: #76A843;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    transition: background-color 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #4AA435;
+}
+
+/* ----------- TÍTULO INFERIOR ----------- */
+
+.titulo-destaque {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+}
+
+.titulo-mais-procurados {
+    font-size: 1.5rem;
+    color: #76A843;
+    font-weight: 500;
+    padding-bottom: 5px;
+    display: inline-block; 
+    border-bottom: 3px solid #76A843;
+}
+
+/* ----------- NOVO: SEÇÃO DE SERVIÇOS/DESTAQUE (Imagem 3c0258) ----------- */
+
+.servicos-destaque-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.servico-card {
+    width: 30%; /* Ajusta a largura para 3 cards */
+    background-color: #76A843; /* Fundo verde */
+    border-radius: 10px; /* Bordas arredondadas */
+    overflow: hidden; /* Garante que a imagem se ajuste ao card */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para destaque */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+}
+
+.servico-img-container {
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.servico-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+    display: block;
+}
+
+.servico-texto {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 10px;
 }
