@@ -14,14 +14,12 @@ body {
 
 .top {
     display: flex;
-    justify-content: flex-start; /* junta todos os itens */
+    justify-content: space-between;   /* empurra o contato para a direita */
     align-items: center;
-    gap: 80px; /* ajuste o valor para aproximar */
     padding: 15px 40px;
 }
 
-
-/* Logo + título juntos */
+/* Logo + título */
 .logo-area {
     display: flex;
     align-items: center;
@@ -41,9 +39,11 @@ body {
     letter-spacing: 1px;
 }
 
-/* Menu da direita */
+/* Menu central */
 .menu {
+    flex: 1;                          /* ocupa o espaço central */
     display: flex;
+    justify-content: center;
     gap: 35px;
 }
 
@@ -56,6 +56,30 @@ body {
 
 .menu a:hover {
     color: #0a3a6e;
+}
+
+/* Contato + perfil à direita */
+.contato-perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contato {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.wall {
+    height: 60px;
+    width: 3px;
+}
+
+.perfil {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
 }
 
 /* ----------- BANNER VERDE ----------- */
