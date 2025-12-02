@@ -1,0 +1,296 @@
+/* ================= RESET GERAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Alterado para Poppins para consistência com o Index */
+    font-family: 'Poppins', Arial, sans-serif; 
+}
+
+body {
+    background-color: #f5f5f5; /* Fundo cinza claro */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================= 1. HEADER (Top) - PADRONIZADO ================= */
+.top {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px; /* Padronizado para 60px */
+    height: 60px;
+    border-radius: 50%;
+}
+
+.titulo {
+    font-size: 30px; /* Padronizado para 30px */
+    font-weight: bold;
+    color: #76A843; /* Padronizado para o verde do Index */
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 10px 15px; 
+}
+/* Destaque para o item 'Loja' (Menu ativo) */
+.menu .menu-ativo {
+    background-color: #f0f0f0; 
+    color: #4CAF50; /* Cor verde para o texto */
+    font-weight: bold;
+}
+
+.menu a:not(.menu-ativo):hover {
+    color: #4CAF50; 
+}
+
+
+
+.contato-Perfil {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Padronizado para 15px */
+}
+
+.contato-Perfil img {
+    width: 35px; /* Padronizado para 35px */
+    height: 35px;
+    cursor: pointer;
+}
+
+.menu .menu-ativo {
+    background-color: #f0f0f0; 
+    color: #4CAF50; 
+    font-weight: bold;
+    border-radius: 4px; /* Adicionado para visual moderno */
+}
+
+.menu a:not(.menu-ativo):hover {
+    color: #4CAF50; 
+}
+/* Badge de Notificação (Padronizado e corrigido) */
+.notification-badge {
+    position: absolute;
+    top: 5px; 
+    right: 55px; /* Ajuste para o ícone de mensagem de 35px com gap de 15px */
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 5px;
+    line-height: 1;
+    border: 2px solid white; /* Mantido para destaque */
+    z-index: 101; 
+}
+
+
+/* ================= 2. BANNER VERDE GRANDE ================= */
+.loja-banner-verde {
+    width: 100%;
+    background-color: #4CAF50; 
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 0; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.loja-banner-verde h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ================= 3. LOJA (Área de Produtos) ================= */
+.loja-container {
+    max-width: 1200px;
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.titulo-loja {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+    font-weight: normal; 
+}
+
+.produtos-grid-loja {
+    display: grid;
+    /* 4 colunas em telas grandes */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.produto-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produto-item:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.produto-img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain; 
+    margin-bottom: 10px;
+}
+
+.produto-id {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.produto-titulo {
+    height: 40px; 
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+
+.produto-preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50; 
+    margin-bottom: 15px;
+}
+
+.btn-saber-mais {
+    background-color: #A6CE39; 
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-saber-mais:hover {
+    background-color: #8cbb2e;
+}
+
+/* PAGINAÇÃO */
+.paginacao {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.paginacao span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.paginacao .active-page {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* ================= 4. FOOTER (Rodapé) ================= */
+.rodape {
+    background-color: #A6CE39; /* Cor verde clara do rodapé */
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 180px;
+}
+
+.rodape-logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.rodape-logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.rodape-links-group {
+    margin: 10px 20px;
+}
+
+.rodape-titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #4AA435; /* Cor verde mais escura para o título */
+}
+
+.rodape-links-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-links-group ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.2s;
+}
+
+.rodape-links-group ul li a:hover {
+    color: #4AA435;
+}

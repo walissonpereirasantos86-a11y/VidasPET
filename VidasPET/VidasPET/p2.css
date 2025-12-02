@@ -1,0 +1,347 @@
+/* ================= 0. RESET GERAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif; 
+}
+
+body {
+    background-color: #f5f5f5; /* Fundo cinza claro, copiado da sua Loja/CSS */
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= 1. HEADER (Top) - COPIADO DA LOJA ================= */
+.top {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 40px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%;
+    /* Mantenha o background-color se não estiver usando a imagem, mas remova se estiver */
+}
+
+.titulo {
+    font-size: 30px; 
+    font-weight: bold;
+    color: #76A843; 
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 10px 15px; 
+}
+
+/* Destaque para o menu ativo */
+.menu .menu-ativo {
+    background-color: #f0f0f0; 
+    color: #4CAF50; 
+    font-weight: bold;
+    border-radius: 4px; /* Adicionado para visual moderno */
+}
+
+.menu a:not(.menu-ativo):hover {
+    color: #4CAF50; 
+}
+
+.contato-Perfil {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.contato-Perfil img {
+    width: 35px; 
+    height: 35px;
+    cursor: pointer;
+}
+
+/* Badge de Notificação */
+.notification-badge {
+    position: absolute;
+    top: 5px; 
+    right: 55px; /* Ajuste para o ícone de mensagem de 35px com gap de 15px */
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 5px;
+    line-height: 1;
+    border: 2px solid white; 
+    z-index: 101; 
+}
+
+/* ================= 2. BANNER DE TÍTULO (Adaptado da Loja) ================= */
+.ficha-banner-verde {
+    width: 100%;
+    background-color: #4CAF50; 
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 0; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.ficha-banner-verde h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+/* ================= 3. CONTEÚDO PRINCIPAL (FICHA DE PETS) ================= */
+
+.main-content-ficha-loja {
+    flex-grow: 1; 
+    padding: 30px 20px 80px 20px; /* Padding de Loja, mas com mais espaço abaixo */
+}
+
+/* Área para centralizar o conteúdo da ficha */
+.container-ficha {
+    max-width: 1000px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+/* Título da Seção Principal (Mantido do estilo da imagem que você gostou) */
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #4AA435; 
+    margin-bottom: 25px;
+    padding-left: 5px; 
+}
+
+/* ============ ESTILOS DO CARD DE PERFIL (Mantido do estilo da imagem que você gostou) ============ */
+.profile-icon-area {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;          /* garante que nada vaze do círculo */
+  display: flex;
+  align-items: center;       /* centraliza verticalmente */
+  justify-content: center;   /* centraliza horizontalmente */
+  background-color: #fff;    /* opcional */
+}
+
+.profile-photo-big {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* preenche o círculo cortando partes, mantendo proporção */
+  object-position: center;   /* centraliza o conteúdo da imagem */
+  display: block;
+}
+
+
+.profile-card-image {
+    background-color: #FFFFFF; 
+    padding: 30px; 
+    margin-bottom: 40px;
+    /* Adiciona sombra para dar destaque ao bloco, como na Loja */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
+    border-radius: 8px;
+}
+
+
+.profile-info-grid {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr; 
+    gap: 15px 20px;
+}
+
+/* Estilo da Caixa de Dados (Verde Claro) */
+.data-box {
+    background-color: #D7EED7; /* Verde Claro da Imagem */
+    border-radius: 5px; 
+    padding: 15px 20px; 
+    font-size: 16px; 
+    color: #333; 
+    font-weight: 500;
+    min-height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #c9c9c9;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #555; 
+    font-size: 13px; 
+    margin-bottom: 3px;
+    display: block;
+}
+
+.profile-icon-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-icon-green {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%;
+    background-color: #76A843; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+.profile-icon-small {
+    height: 30px; 
+    background-color: transparent;
+}
+
+.address-box-wrapper {
+    grid-column: 2 / 4; 
+}
+
+
+/* ============ ESTILOS DA SEÇÃO DE PETS (Mantido do estilo da imagem que você gostou) ============ */
+
+.pet-data-section-image {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.pet-data-col-left {
+    flex-basis: 70%; 
+}
+
+.pet-data-col-right {
+    flex-basis: 30%; 
+}
+
+.pet-field-full {
+    margin-bottom: 15px;
+}
+
+.pet-title-right {
+    background-color: #F4F4F4; 
+    margin-bottom: 20px;
+}
+
+.add-pet-button-image {
+    height: 350px; 
+    background-color: #D7EED7; 
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #c9c9c9;
+    text-align: center;
+}
+
+.add-pet-button-image:hover {
+    background-color: #c0ecc0;
+}
+
+.add-pet-button-image .plus-icon {
+    font-size: 120px; 
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 5px;
+    color: #76A843; 
+}
+
+
+/* ================= 4. FOOTER (Rodapé) - COPIADO DA LOJA ================= */
+.rodape {
+    background-color: #A6CE39; /* Cor verde clara do rodapé */
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    min-height: 180px;
+}
+
+.rodape-logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.rodape-logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.rodape-links-group {
+    margin: 10px 20px;
+}
+
+.rodape-titulo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #4AA435; /* Cor verde mais escura para o título */
+}
+
+.rodape-links-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rodape-links-group ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.2s;
+}
+
+.rodape-links-group ul li a:hover {
+    color: #4AA435;
+}
