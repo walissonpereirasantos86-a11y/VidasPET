@@ -1,21 +1,18 @@
-/* Reset básico: Garante que todos os elementos comecem sem margem ou padding padrão */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Inclui padding e borda dentro da largura/altura total */
-    /* Alterado para Poppins para consistência */
+    box-sizing: border-box;
     font-family: 'Poppins', Arial, sans-serif; 
 }
 
 body {
-    background-color: #f5f5f5; /* Fundo cinza claro */
+    background-color: #f5f5f5;
 }
 
 a {
     text-decoration: none;
 }
 
-/* ================= 1. HEADER (Top) - PADRONIZADO ================= */
 .top {
     width: 100%;
     background-color: #ffffff;
@@ -36,15 +33,15 @@ a {
 }
 
 .logo {
-    width: 60px; /* Padronizado para 60px */
+    width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
 .titulo {
-    font-size: 30px; /* Padronizado para 30px */
+    font-size: 30px;
     font-weight: bold;
-    color: #76A843; /* Padronizado para o verde do Index */
+    color: #76A843;
     letter-spacing: 1px;
 }
 
@@ -61,10 +58,9 @@ a {
     padding: 10px 15px; 
 }
 
-/* Destaque para o item 'Loja' (Menu ativo) */
 .menu .menu-ativo {
     background-color: #f0f0f0; 
-    color: #4CAF50; /* Cor verde para o texto */
+    color: #4CAF50;
     font-weight: bold;
 }
 
@@ -76,20 +72,19 @@ a {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 15px; /* Padronizado para 15px */
+    gap: 15px;
 }
 
 .contato-Perfil img {
-    width: 35px; /* Padronizado para 35px */
+    width: 35px;
     height: 35px;
     cursor: pointer;
 }
 
-/* Badge de Notificação (Padronizado e corrigido) */
 .notification-badge {
     position: absolute;
     top: 5px; 
-    right: 55px; /* Ajuste para o ícone de mensagem de 35px com gap de 15px */
+    right: 55px;
     background-color: red;
     color: white;
     font-size: 10px;
@@ -97,20 +92,16 @@ a {
     border-radius: 50%;
     padding: 2px 5px;
     line-height: 1;
-    border: 2px solid white; /* Mantido para destaque */
+    border: 2px solid white;
     z-index: 101; 
 }
 
 
-/* ----------- Layout Principal com Sidebar ----------- */
-
 .main-content-wrapper {
     display: flex; 
-    /* Ajustado para considerar a altura do header fixo */
     min-height: calc(100vh - 90px); 
 }
 
-/* SIDEBAR ESQUERDA */
 .consultas-hoje {
     background-color: #92ba6a; 
     color: white;
@@ -146,14 +137,11 @@ a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); 
 }
 
-/* ÁREA PRINCIPAL DE CONTEÚDO */
 .main-area {
     flex-grow: 1; 
     padding: 20px; 
 }
 
-
-/* ----------- 1. BANNER VERDE PRINCIPAL ----------- */
 
 .banner-verde {
     background-color: #4AA435;
@@ -209,8 +197,6 @@ a {
 }
 
 
-/* ----------- 2. SEÇÃO DE PRODUTOS ----------- */
-
 .sub-titulo-produtos {
     font-size: 1.5rem;
     color: #333;
@@ -231,7 +217,6 @@ a {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 10px;
-    /* 5 cards por linha */
     width: calc(20% - 16px); 
     text-align: center;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
@@ -280,8 +265,6 @@ a {
     background-color: #4AA435;
 }
 
-/* ----------- 3. TÍTULO DESTAQUE ----------- */
-
 .titulo-destaque {
     margin-top: 40px;
     text-align: center;
@@ -296,8 +279,6 @@ a {
     display: inline-block; 
     border-bottom: 3px solid #76A843;
 }
-
-/* ----------- 4. SEÇÃO DE SERVIÇOS/DESTAQUE (3 CARDS) ----------- */
 
 .servicos-destaque-grid {
     display: flex;
@@ -343,12 +324,9 @@ a {
     padding: 15px 10px;
 }
 
-/* ----------- 5. BANNER DIA DO CÃO ----------- */
-
 .banner-dia-do-cao {
     position: relative;
     width: 100%;
-    /* Mantendo a altura ajustada (450px) para exibir o cachorro */
     height: 450px; 
     background-color: white; 
     overflow: hidden;
@@ -363,11 +341,6 @@ a {
     height: 100%;
 }
 
-/* ❌ REMOVIDO: Formas Verdes de Fundo (.conteudo-banner::before e ::after) */
-/* Removidas completamente para tirar as "bolhas verdes" */
-
-
-/* Imagem do Cachorro */
 .img-cao-banner {
     position: absolute;
     width: 100%; 
@@ -375,12 +348,10 @@ a {
     top: 0;
     left: 0;
     object-fit: cover; 
-    /* Ajuste de posição mantido para centralizar o cachorro no novo banner */
     object-position: center 30%; 
     z-index: 1; 
 }
 
-/* Texto Principal "DIA DO CÃO" */
 .texto-principal {
     position: absolute;
     left: 10%;
@@ -407,15 +378,10 @@ a {
     margin-top: -20px;
 }
 
-/* ❌ REMOVIDO: Bloco de Desconto (Tracejado) */
-/* Removido completamente para tirar a seção de "50% OFF" */
-
-
-/* Assinatura (Ajustada para ficar no canto inferior direito, já que o bloco de desconto saiu) */
 .assinatura {
     position: absolute;
-    right: 20px; /* Ajuste para a margem da direita */
-    bottom: 15px; /* Ajuste para a margem de baixo */
+    right: 20px;
+    bottom: 15px;
     font-size: 0.8rem;
     color: white;
     background-color: #76A843;
@@ -424,10 +390,8 @@ a {
     z-index: 4;
 }
 
-/* ----------- RODAPÉ ----------- */
-
 .rodape {
-    background-color: #A6CE39; /* Cor verde clara do rodapé */
+    background-color: #A6CE39;
     color: white;
     padding: 30px 20px;
     display: flex;
@@ -462,7 +426,7 @@ a {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #4AA435; /* Cor verde mais escura para o título */
+    color: #4AA435;
 }
 
 .rodape-links-group ul {

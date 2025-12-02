@@ -1,21 +1,18 @@
-/* ================= RESET GERAL ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Alterado para Poppins para consistência com o Index */
     font-family: 'Poppins', Arial, sans-serif; 
 }
 
 body {
-    background-color: #f5f5f5; /* Fundo cinza claro */
+    background-color: #f5f5f5;
 }
 
 a {
     text-decoration: none;
 }
 
-/* ================= 1. HEADER (Top) - PADRONIZADO ================= */
 .top {
     width: 100%;
     background-color: #ffffff;
@@ -36,15 +33,15 @@ a {
 }
 
 .logo {
-    width: 60px; /* Padronizado para 60px */
+    width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
 .titulo {
-    font-size: 30px; /* Padronizado para 30px */
+    font-size: 30px;
     font-weight: bold;
-    color: #76A843; /* Padronizado para o verde do Index */
+    color: #76A843;
     letter-spacing: 1px;
 }
 
@@ -60,28 +57,27 @@ a {
     transition: color 0.3s;
     padding: 10px 15px; 
 }
-/* Destaque para o item 'Loja' (Menu ativo) */
+
 .menu .menu-ativo {
     background-color: #f0f0f0; 
-    color: #4CAF50; /* Cor verde para o texto */
+    color: #4CAF50;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .menu a:not(.menu-ativo):hover {
     color: #4CAF50; 
 }
 
-
-
 .contato-Perfil {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 15px; /* Padronizado para 15px */
+    gap: 15px;
 }
 
 .contato-Perfil img {
-    width: 35px; /* Padronizado para 35px */
+    width: 35px;
     height: 35px;
     cursor: pointer;
 }
@@ -90,17 +86,17 @@ a {
     background-color: #f0f0f0; 
     color: #4CAF50; 
     font-weight: bold;
-    border-radius: 4px; /* Adicionado para visual moderno */
+    border-radius: 4px;
 }
 
 .menu a:not(.menu-ativo):hover {
     color: #4CAF50; 
 }
-/* Badge de Notificação (Padronizado e corrigido) */
+
 .notification-badge {
     position: absolute;
     top: 5px; 
-    right: 55px; /* Ajuste para o ícone de mensagem de 35px com gap de 15px */
+    right: 55px;
     background-color: red;
     color: white;
     font-size: 10px;
@@ -108,12 +104,11 @@ a {
     border-radius: 50%;
     padding: 2px 5px;
     line-height: 1;
-    border: 2px solid white; /* Mantido para destaque */
+    border: 2px solid white;
     z-index: 101; 
 }
 
 
-/* ================= 2. BANNER VERDE GRANDE ================= */
 .loja-banner-verde {
     width: 100%;
     background-color: #4CAF50; 
@@ -130,7 +125,6 @@ a {
     margin: 0;
 }
 
-/* ================= 3. LOJA (Área de Produtos) ================= */
 .loja-container {
     max-width: 1200px;
     margin: 40px auto; 
@@ -147,7 +141,6 @@ a {
 
 .produtos-grid-loja {
     display: grid;
-    /* 4 colunas em telas grandes */
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
@@ -211,7 +204,6 @@ a {
     background-color: #8cbb2e;
 }
 
-/* PAGINAÇÃO */
 .paginacao {
     text-align: center;
     margin-top: 40px;
@@ -237,9 +229,8 @@ a {
     color: white;
 }
 
-/* ================= 4. FOOTER (Rodapé) ================= */
 .rodape {
-    background-color: #A6CE39; /* Cor verde clara do rodapé */
+    background-color: #A6CE39;
     color: white;
     padding: 30px 20px;
     display: flex;
@@ -274,7 +265,7 @@ a {
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #4AA435; /* Cor verde mais escura para o título */
+    color: #4AA435;
 }
 
 .rodape-links-group ul {
